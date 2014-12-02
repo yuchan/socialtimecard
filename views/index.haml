@@ -2,9 +2,8 @@
 %html
   %head
     %title My Sinatra Website
-    %link{rel:"stylesheet", href:stylesheet_path("application")}
-    /[if lt IE 9]
-      %script{src:javascript_path("html5shiv/dist/html5shiv")}
+    != css :app
+    != js :app
     %body
       %h1 Welcome
       %p
@@ -17,5 +16,3 @@
             #{@me['name']}
             %a{:href => "/sign_out" }
               logout
-      
-      %script{src:javascript_path("application")}

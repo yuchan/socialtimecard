@@ -1,14 +1,32 @@
 require 'bundler'
 Bundler.require
-include Sprockets::Helpers
 
 class App < Sinatra::Base
-    set :sprockets, Sprockets::Environment.new(root)
+    set :root, File.dirname(__FILE__)
+
+    register Sinatra::AssetPack
+
     configure do
         APPLICATION_ID = "577577215707969"
         APPLICATION_SECRET = "6227419b9da54880f419ab45d7e8357e"
         set :sessions, true
         enable :sessions
+    end
+
+    assets do
+        serve '/javascript', from: 'assets/javascript'
+        serve '/stylesheet', from: 'assets/stylesheet'
+
+        js :app, '/javascript/application.js', [
+            '/javascript/*.js',
+            '/javascript/*.coffee'
+        ]
+
+        css :app, '/stylesheet/application.css', [
+        ]
+
+        js_compression :jsmin
+        css_compression :simple
     end
 
     before do
