@@ -1,7 +1,4 @@
 # socialtimecard
-[![NPM Version](https://badge.fury.io/js/socialtimecard.png)](https://npmjs.org/package/socialtimecard)
-[![Build Status](https://secure.travis-ci.org/yuchan/socialtimecard.png)](http://travis-ci.org/yuchan/socialtimecard)
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com)
 
 > The best project ever.
 
