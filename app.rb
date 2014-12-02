@@ -19,14 +19,16 @@ class App < Sinatra::Base
 
         js :app, '/javascript/application.js', [
             '/javascript/*.js',
-            '/javascript/*.coffee'
+            '/javascript/*.coffee',
         ]
 
         css :app, '/stylesheet/application.css', [
+            '/stylesheet/*.scss',
+            '/stylesheet/*.css',
         ]
 
         js_compression :jsmin
-        css_compression :simple
+        css_compression :sass
     end
 
     before do

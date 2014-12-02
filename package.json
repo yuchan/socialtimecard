@@ -1,0 +1,43 @@
+{
+  "name": "socialtimecard",
+  "description": "The best project ever.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/yuchan/socialtimecard",
+  "author": {
+    "name": "Yusuke Ohashi",
+    "email": "yusuke@junkpiano.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuchan/socialtimecard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yuchan/socialtimecard/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/yuchan/socialtimecard/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "grunt": "~0.4.2",
+    "grunt-codo": "~0.1.0",
+    "grunt-coffeelint": "0.0.8",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-coffee": "~0.10.0",
+    "grunt-contrib-uglify": "~0.3.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-mocha-cli": "~1.5.0",
+    "load-grunt-tasks": "~0.3.0",
+    "should": "~3.1.0"
+  },
+  "keywords": []
+}

@@ -2,8 +2,8 @@
 %html
   %head
     %title My Sinatra Website
+    %link{:rel => "stylesheet", :href => "/css/bower.css"}
     != css :app
-    != js :app
     %body
       %h1 Welcome
       %p
@@ -16,3 +16,6 @@
             #{@me['name']}
             %a{:href => "/sign_out" }
               logout
+     
+      %script{ :src => "/js/bower.js" }
+      != js :app
