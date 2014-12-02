@@ -1,21 +1,29 @@
 !!!
 %html
   %head
-    %title My Sinatra Website
+    %title Social Timecard 
     %link{:rel => "stylesheet", :href => "/css/bower.css"}
     != css :app
     %body
-      %h1 Welcome
-      %p
-        Welcome to my website made with Sinatra and HAML
-        - if @graph == nil
-          %a{:href => "/sign_in" }
-            login
-        - else
-          %p
-            #{@me['name']}
-            %a{:href => "/sign_out" }
+      %div{:class => "jumbotron"}
+        %div{:class => "container"}
+          - if @graph == nil
+            %p
+              Social TimecardはどこかにIn/Outしたことをお友達に使えるシンプルなアプリです。
+              まずはfacebookでログインしてね！
+            %a{:href => "/sign_in", :class => 'btn btn-default' }
+              Signin with Facebook
+          - else
+            %h1 Welcome #{@me['name']}
+            %a{:href => "/sign_out", :class => 'btn btn-default'}
               logout
-     
+      %div{:class => 'container'}
+        %div{:class => 'row'}
+          %div{:class => 'col-md-6'}  
+            %a{:href => "#", :class => 'btn btn-primary btn-lg inbtn'}
+              In    
+          %div{:class => 'col-md-6'}
+            %a{:href => "#", :class => 'btn btn-primary btn-lg outbtn'}
+              Out 
       %script{ :src => "/js/bower.js" }
       != js :app
